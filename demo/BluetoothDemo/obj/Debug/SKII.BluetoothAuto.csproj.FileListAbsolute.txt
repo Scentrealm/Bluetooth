@@ -1,0 +1,13 @@
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\bin\Debug\SKII.BluetoothAuto.exe.config
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\bin\Debug\SKII.BluetoothAuto.exe
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\bin\Debug\SKII.BluetoothAuto.pdb
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.mainFrm.resources
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.Properties.Resources.resources
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.csproj.GenerateResource.cache
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.csproj.CoreCompileInputs.cache
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.csproj.CopyComplete
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.exe
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.pdb
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\bin\Debug\System.Data.SQLite.xml
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\bin\Debug\System.Data.SQLite.dll.config
+E:\MyProjects\BlueToothProject\3Coding\SKII.BluetoothAuto\obj\Debug\SKII.BluetoothAuto.csproj.AssemblyReference.cache

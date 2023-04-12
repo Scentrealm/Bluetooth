@@ -1,0 +1,11 @@
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\bin\Debug\BluetoothDemo.exe.config
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\bin\Debug\BluetoothDemo.exe
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\bin\Debug\BluetoothDemo.pdb
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\BluetoothDemo.csproj.AssemblyReference.cache
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\SKII.BluetoothAuto.mainFrm.resources
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\SKII.BluetoothAuto.Properties.Resources.resources
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\BluetoothDemo.csproj.GenerateResource.cache
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\BluetoothDemo.csproj.CoreCompileInputs.cache
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\BluetoothDemo.csproj.CopyComplete
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\BluetoothDemo.exe
+E:\MyProjects\BlueToothProject\3Coding\BluetoothDemo\obj\Debug\BluetoothDemo.pdb

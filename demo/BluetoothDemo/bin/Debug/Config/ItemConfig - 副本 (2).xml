@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+   <CheckCases name="测试指令集">
+	   <CheckItem cmdstr="02" cmddesc="播放单路气味1" cmd="F5 00 00 00 01 02 05 01 00 00 07 D0 D1 DA 55" rtnNum="1" rebuild="false"/>
+	   <CheckItem cmdstr="02" cmddesc="播放单路气味3" cmd="F5 00 00 00 01 02 05 03 00 00 07 D0 11 A3 55" rtnNum="1" rebuild="false"/>
+	   <CheckItem cmdstr="02" cmddesc="播放单路气味5" cmd="F5 00 00 00 01 02 05 05 00 00 07 D0 11 2B 55" rtnNum="1" rebuild="false"/>
+	   <CheckItem cmdstr="0E" cmddesc="获取设备气路通道的气味编码" cmd="F5 00 00 00 01 0E 01 06 AD FA 55" rtnNum="1" rebuild="false"/>
+	   <CheckItem cmdstr="11" cmddesc="获取设备状态" cmd="F5 00 00 00 01 11 01 00 69 4B 55" rtnNum="6" rebuild="false"/>
+    </CheckCases>
+	<WaitTime value="3"/>
+<Version value="3路自动测试V2.5"/>
+</Configuration>

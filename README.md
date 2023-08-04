@@ -68,7 +68,7 @@
 
 # 常用指令编码
 
-## 1. 停止播放/重启与初始化 
+## 1. 停止播放/重启与初始化
 
 描述
 
@@ -270,3 +270,25 @@
 ## 注意事项
 
 每个蓝牙外围设备都有唯一的 `deviceId`来标识。由于部分系统实现的限制，对于同一台蓝牙外围设备，在不同中心设备上扫描获取到的 `deviceId`可能是变化的。因此 `deviceId`不能硬编码到代码中。
+
+
+### CRC校验函数 使用多项式 0xA001;C#/C++算法如下所示
+```c
+public static ushort CalcCrc(byte[] data) {
+  int len = data.Length;
+  if (len > 0) {
+    ushort crc = 0xFFFF;
+    for (int i = 0; i < len; i++) {
+      crc = (ushort)(crc ^ (data[i]));
+      for (int j = 0; j < 8; j++) {
+        crc = (crc & 1) != 0 ? (ushort)((crc >> 1)^ 0xA001):(ushort)(crc >> 1);
+      }
+    }
+
+    byte hi = (byte)((crc & 0xFF00) >> 8); //高位置
+    byte lo = (byte)(crc & 0x00FF); //低位置
+    return (ushort)(hi * 256 + lo);
+  }
+  return 0;
+}
+```

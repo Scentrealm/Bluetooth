@@ -332,3 +332,94 @@ public static ushort CalcCrc(byte[] data) {
   return 0;
 }
 ```
+
+### 电量计算（根据锂电池电压对比计算）
+```javascript
+const VOLTAGE_LIST = [
+  {
+    voltage: "3.00",
+    percent: 0,
+  },
+  {
+    voltage: "3.45",
+    percent: 0.05,
+  },
+  {
+    voltage: "3.68",
+    percent: 0.1,
+  },
+  {
+    voltage: "3.74",
+    percent: 0.2,
+  },
+  {
+    voltage: "3.77",
+    percent: 0.3,
+  },
+  {
+    voltage: "3.79",
+    percent: 0.4,
+  },
+  {
+    voltage: "3.82",
+    percent: 0.5,
+  },
+  {
+    voltage: "3.87",
+    percent: 0.6,
+  },
+  {
+    voltage: "3.92",
+    percent: 0.7,
+  },
+  {
+    voltage: "3.98",
+    percent: 0.8,
+  },
+  {
+    voltage: "4.06",
+    percent: 0.9,
+  },
+  {
+    voltage: "4.20",
+    percent: 1,
+  },
+];
+
+function toPercent(num) {
+  let val = Math.round(Number(num) * 100 * 10 / 9);
+  if (val >= 100) {
+    val = 100;
+  }
+  return val + '%';
+};
+
+function getVoltage(vol) {
+  let list = VOLTAGE_LIST;
+  let obj = list.find((ele) => ele.voltage == vol);
+
+  if (obj) {
+    return toPercent(obj.percent);
+  } else {
+    if (vol <= list[0].voltage) {
+      //电压小于等于 3v,电量 0
+      return '0%';
+    } else if (vol >= 4.1) {
+      //电压大于4.1 就可以显示 100%
+      return '100%';
+    } else {
+      let result = 0;
+      list.map((item, index) => {
+        if (vol > item.voltage && vol < list[index + 1].voltage) {
+          let vx = Number(list[index + 1].voltage) - Number(item.voltage);
+          let vy = Number(list[index + 1].percent) - Number(item.percent);
+          result =
+            Number(list[index + 1].percent) -
+            (vy * (Number(list[index + 1].voltage) - vol)) / vx;
+        }
+      });
+      return toPercent(result);
+    }
+  }
+};
+```

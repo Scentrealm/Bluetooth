@@ -387,7 +387,7 @@ const VOLTAGE_LIST = [
 ];
 
 function toPercent(num) {
-  let val = Math.round(Number(num) * 100 * 10 / 9);
+  let val = Math.round(Number(num) * 100);
   if (val >= 100) {
     val = 100;
   }

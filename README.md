@@ -335,6 +335,8 @@ public static ushort CalcCrc(byte[] data) {
 
 ### 电量计算（根据锂电池电压对比计算）
 ```javascript
+
+// 锂电池的电量是根据电压进行换算的
 const VOLTAGE_LIST = [
   {
     voltage: "3.00",
@@ -394,6 +396,15 @@ function toPercent(num) {
   return val + '%';
 };
 
+/*
+ * 根据电压计算电量百分比：
+ * 1. 低于 3v 显示 0%
+ * 2. 超过 4.1 显示100%
+ * 3. 刚好返回是这几个固定值之一，显示对应的百分比
+ * 4. 在两个值之间，譬如（返回 4.08， 在  4.06 和 4.2 之间）
+4.06 到 4.2，对应的电量是0.9到1， 那么每单位电压对应的变化就是  (1-0.9)/(4.2-4.06)，4.08 对应的电量就是  (1-0.9)/(4.2-4.06) * (4.08-4.06) + 0.9
+ * 5. 电量四舍五入向上取整
+*/
 function getVoltage(vol) {
   let list = VOLTAGE_LIST;
   let obj = list.find((ele) => ele.voltage == vol);

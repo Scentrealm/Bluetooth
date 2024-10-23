@@ -638,3 +638,33 @@ async def main():
 asyncio.run(main())
 
 ```
+
+
+### 多路混香 Demo
+```python
+
+total_v = 255  # 总体积 255 ML
+channel_ratio = [0, 10, 30, 0, 30, 50]  # 表示第一路不播放，第二路10%，第三路30%，第四路不播放，第五路30%，第六路50%
+
+cmd_list = [0, 0, 0, 0, 0, 0]
+
+play_channel_number_total = 0
+play_channel_ratio_total = 0
+
+for ratio in channel_ratio:
+    if ratio != 0:
+        play_channel_number_total += 1
+        play_channel_ratio_total += ratio
+
+if play_channel_ratio_total == 0:
+    print("请至少选择一路播放")
+    exit()
+
+channel_avg_v = 255 / play_channel_ratio_total
+for key, ratio in enumerate(channel_ratio):
+    if ratio != 0:
+        cmd_list[key] = int(ratio * channel_avg_v)
+
+print(cmd_list)
+
+```
